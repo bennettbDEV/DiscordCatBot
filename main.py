@@ -96,6 +96,7 @@ def main():
     TOKEN = os.getenv("DISCORD_TOKEN")
 
     intents = discord.Intents.default()
+    intents.message_content = True
     intents.messages = True
     intents.guilds = True
     bot = CameraBot(command_prefix="$", intents=intents)
