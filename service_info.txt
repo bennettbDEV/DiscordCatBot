@@ -1,0 +1,14 @@
+[Unit]
+Description=DiscordBot
+After=network.target
+
+[Service]
+WorkingDirectory=/home/lelouch/bot_code
+ExecStart=/home/lelouch/bot_code/venv/bin/python /home/lelouch/bot_code/main.py
+Restart=always
+RestartSec=10
+User=lelouch
+Environment="PYTHONUNBUFFERED=1"
+
+[Install]
+WantedBy=multi-user.target
